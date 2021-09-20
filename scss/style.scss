@@ -3,3 +3,55 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body, input, button {
+    font-size: 3vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#root {
+    width: (100% / 1.5);
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // border: 0.2em solid red;
+
+        > * {
+            padding: 1em;
+        }
+
+        .logo {
+            // border: 0.2em solid blue;
+
+            img {
+                height: 10vh;
+            }
+        }
+
+        .input-section {
+            display: flex;
+            // border: 0.2em solid blue;
+
+            > * {
+                margin: 0.5em;
+            }
+            
+            input {
+                width: (100% / 2);
+                padding: 0.2em;
+                text-align: center;
+            }
+
+            button {
+                padding: 0 1em;
+            }
+        }
+    }
+}
