@@ -31,11 +31,9 @@
                         <p v-if="!toDo.editMode || toDo.done">{{toDo.desc}}</p>
                         <input v-if="toDo.editMode && !toDo.done" v-model="toDo.desc" @keyup.enter="saveTodo(toDo)"
                             type="text" placeholder="Scrivi qui...">
-                        <button class="btnSaveTodo" v-if="toDo.editMode && !toDo.done"
-                            @click="saveTodo(toDo)">Salva</button>
                         <button class="changeStatus" v-if="toDo.editMode" @click="changeStatus(toDo)">
-                            <i v-if="!toDo.done" class="fas fa-check-square"></i>
-                            <i v-if="toDo.done" class="fas fa-window-close"></i>
+                            <i v-if="!toDo.done" class="fas fa-calendar-check"></i>
+                            <i v-if="toDo.done" class="fas fa-calendar-times"></i>
                         </button>
                         <button v-if="toDo.editMode && !toDo.done" class="priority" :class="isPriority(toDo)"
                             @click="changePriority(toDo)">

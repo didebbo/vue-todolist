@@ -37,7 +37,6 @@ body {
 
         .input-section {
             display: flex;
-            // border: 0.2em solid blue;
 
             > * {
                 margin: 0.5em;
@@ -57,7 +56,6 @@ body {
 
     main {
         padding-top: 2em;
-        // border: 0.2em solid orange;
 
         ul {
             display: flex;
@@ -69,7 +67,6 @@ body {
             li {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
                 padding: 0.5em;
                 border-bottom: 0.01em solid gray;
                 transition: background-color 0.2s;
@@ -88,19 +85,21 @@ body {
 
                 .desc {
                     display: flex;
+                    flex-grow: 1;
                     cursor: default;
 
                     > * {
-                        margin: 0.2em;
+                        margin: 0.4em;
                     }
 
                     > *:not(p) {
                         cursor: pointer;
                     }
 
-                    > input {
+                    p, input {
+                        margin-right: auto;
                         padding: 0.2em;
-                    } 
+                    }
 
                     .btnSaveTodo{
                         padding: 0 0.5em;
@@ -108,21 +107,19 @@ body {
 
                     .changeStatus {
                         border: none;
-                        font-size: 1em;
                         background-color: transparent;
 
-                        .fa-check-square {
+                        .fa-calendar-check {
                             color: green;
                         }
 
-                        .fa-window-close {
+                        .fa-calendar-times {
                             color: red;
                         }
                     }
 
                     .priority {
                         border: none;
-                        font-size: 1em;
                         background-color: transparent;
                         color: orange;
 
@@ -137,7 +134,7 @@ body {
 
                     * {
                         cursor: pointer;
-                        margin: 0.2em;
+                        margin: 0 0.2em;
                     }
                 }
             }

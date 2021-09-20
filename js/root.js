@@ -39,7 +39,7 @@ const root = new Vue(
                 }
             },
             editToDo: function (toDo) {
-                toDo.editMode = true;
+                toDo.editMode = !toDo.editMode;
             },
             saveTodo: function (toDo) {
                 console.log(toDo);
@@ -55,6 +55,9 @@ const root = new Vue(
             changeStatus: function (toDo) {
                 toDo.done = !toDo.done;
                 this.saveTodo(toDo);
+            },
+            isDone: function (toDo) {
+                if (toDo.done) return "done";
             },
             colorStatus: function (toDo) {
                 if (toDo.done) return "done";
