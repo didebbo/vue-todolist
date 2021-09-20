@@ -6,7 +6,7 @@ const root = new Vue(
             toDos: [
                 {
                     desc: "Andare a Scuola",
-                    done: false,
+                    done: true,
                     editMode: false
                 },
                 {
@@ -38,6 +38,7 @@ const root = new Vue(
                 toDo.editMode = true;
             },
             saveTodo: function (toDo) {
+                console.log(toDo);
                 toDo.editMode = false;
             },
             deleteToDo: function (index) {
@@ -46,6 +47,10 @@ const root = new Vue(
                     if (i != index) tmpToDos.push(toDo);
                 });
                 this.toDos = tmpToDos;
+            },
+            changeStatus: function (toDo) {
+                toDo.done = !toDo.done;
+                this.saveTodo(toDo);
             }
         }
     }

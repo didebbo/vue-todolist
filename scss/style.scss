@@ -77,12 +77,43 @@ body {
                     background-color: white;
                 }
 
+                &.done {
+                    background-color: lightgreen;
+                }
+
                 .desc {
+                    display: flex;
                     cursor: default;
+
+                    > * {
+                        margin: 0.2em;
+                    }
+
+                    > *:not(p) {
+                        cursor: pointer;
+                    }
 
                     > input {
                         padding: 0.2em;
                     } 
+
+                    .btnSaveTodo{
+                        padding: 0 0.5em;
+                    }
+
+                    .changeStatus {
+                        border: none;
+                        font-size: 1.2em;
+                        background-color: transparent;
+
+                        .fa-check-square {
+                            color: green;
+                        }
+
+                        .fa-window-close {
+                            color: red;
+                        }
+                    }
                 }
 
                 .controls {
