@@ -63,6 +63,9 @@ const root = new Vue(
             changePriority: function (toDo) {
                 toDo.priority = !toDo.priority;
                 this.saveTodo(toDo);
+            },
+            isPriority: function (toDo) {
+                if (toDo.priority) return "not";
             }
         }
     }

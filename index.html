@@ -37,7 +37,8 @@
                             <i v-if="!toDo.done" class="fas fa-check-square"></i>
                             <i v-if="toDo.done" class="fas fa-window-close"></i>
                         </button>
-                        <button v-if="toDo.editMode && !toDo.done" class="priority" @click="changePriority(toDo)">
+                        <button v-if="toDo.editMode && !toDo.done" class="priority" :class="isPriority(toDo)"
+                            @click="changePriority(toDo)">
                             <i class="fas fa-exclamation-triangle"></i>
                         </button>
                     </div>
