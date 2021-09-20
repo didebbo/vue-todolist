@@ -81,6 +81,10 @@ body {
                     background-color: lightgreen;
                 }
 
+                &.priority {
+                    background-color: lightyellow;
+                }
+
                 .desc {
                     display: flex;
                     cursor: default;
@@ -113,6 +117,13 @@ body {
                         .fa-window-close {
                             color: red;
                         }
+                    }
+
+                    .priority {
+                        border: none;
+                        font-size: 1.2em;
+                        background-color: transparent;
+                        color: orange;
                     }
                 }
 

@@ -26,7 +26,7 @@
         </header>
         <main>
             <ul>
-                <li :class="toDo.done ? 'done' : ''" :key="index" v-for="(toDo, index) in toDos">
+                <li :class="colorStatus(toDo)" :key="index" v-for="(toDo, index) in toDos">
                     <div class="desc">
                         <p v-if="!toDo.editMode">{{toDo.desc}}</p>
                         <input v-if="toDo.editMode" v-model="toDo.desc" @keyup.enter="saveTodo(toDo)" type="text"
@@ -35,6 +35,9 @@
                         <button class="changeStatus" v-if="toDo.editMode" @click="changeStatus(toDo)">
                             <i v-if="!toDo.done" class="fas fa-check-square"></i>
                             <i v-if="toDo.done" class="fas fa-window-close"></i>
+                        </button>
+                        <button v-if="toDo.editMode && !toDo.done" class="priority" @click="changePriority(toDo)">
+                            <i class="fas fa-exclamation-triangle"></i>
                         </button>
                     </div>
                     <div class="controls">

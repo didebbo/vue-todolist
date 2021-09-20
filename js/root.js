@@ -7,17 +7,20 @@ const root = new Vue(
                 {
                     desc: "Andare a Scuola",
                     done: true,
-                    editMode: false
+                    editMode: false,
+                    priority: false
                 },
                 {
                     desc: "Fare i compiti",
                     done: false,
-                    editMode: false
+                    editMode: false,
+                    priority: false
                 },
                 {
                     desc: "Andare in Palestra",
                     done: false,
-                    editMode: false
+                    editMode: false,
+                    priority: false
                 }
             ]
         },
@@ -28,7 +31,8 @@ const root = new Vue(
                         {
                             desc: this.toDo,
                             done: false,
-                            editMode: false
+                            editMode: false,
+                            priority: false
                         }
                     );
                     this.toDo = "";
@@ -50,6 +54,14 @@ const root = new Vue(
             },
             changeStatus: function (toDo) {
                 toDo.done = !toDo.done;
+                this.saveTodo(toDo);
+            },
+            colorStatus: function (toDo) {
+                if (toDo.done) return "done";
+                if (toDo.priority) return "priority";
+            },
+            changePriority: function (toDo) {
+                toDo.priority = !toDo.priority;
                 this.saveTodo(toDo);
             }
         }
