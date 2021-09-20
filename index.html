@@ -49,6 +49,9 @@
                         </div>
                     </div>
                 </li>
+                <template v-if="toDos.length <= 0">
+                    Non ci sono To Do!
+                </template>
             </ul>
         </main>
     </div>
