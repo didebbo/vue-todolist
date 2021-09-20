@@ -14,7 +14,7 @@ const root = new Vue(
                     desc: "Fare i compiti",
                     done: false,
                     editMode: false,
-                    priority: false
+                    priority: true
                 },
                 {
                     desc: "Andare in Palestra",
