@@ -79,12 +79,18 @@ body {
 
                 .desc {
                     cursor: default;
+
+                    > input {
+                        padding: 0.2em;
+                    } 
                 }
 
                 .controls {
+                    display: flex;
 
-                    .delete {
+                    * {
                         cursor: pointer;
+                        margin: 0.2em;
                     }
                 }
             }

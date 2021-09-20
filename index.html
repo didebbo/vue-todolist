@@ -28,9 +28,15 @@
             <ul>
                 <li :key="index" v-for="(toDo, index) in toDos">
                     <div class="desc">
-                        {{toDo}}
+                        <p v-if="!toDo.editMode">{{toDo.desc}}</p>
+                        <input v-if="toDo.editMode" v-model="toDo.desc" @keyup.enter="saveTodo(toDo)" type="text"
+                            placeholder="Scrivi qui...">
+                        <button v-if="toDo.editMode" @click="saveTodo(toDo)">Salva</button>
                     </div>
                     <div class="controls">
+                        <div class="edit" @click="editToDo(toDo)">
+                            <i class="fas fa-edit"></i>
+                        </div>
                         <div class="delete" @click="deleteToDo(index)">
                             <i class="fas fa-times"></i>
                         </div>

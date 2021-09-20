@@ -3,14 +3,42 @@ const root = new Vue(
         el: "#root",
         data: {
             toDo: "",
-            toDos: ["Andare a Scuola", "Fare i compiti", "Andare in palestra"]
+            toDos: [
+                {
+                    desc: "Andare a Scuola",
+                    done: false,
+                    editMode: false
+                },
+                {
+                    desc: "Fare i compiti",
+                    done: false,
+                    editMode: false
+                },
+                {
+                    desc: "Andare in Palestra",
+                    done: false,
+                    editMode: false
+                }
+            ]
         },
         methods: {
             addToDo: function () {
                 if (this.toDo != "") {
-                    this.toDos.push(this.toDo);
+                    this.toDos.push(
+                        {
+                            desc: this.toDo,
+                            done: false,
+                            editMode: false
+                        }
+                    );
                     this.toDo = "";
                 }
+            },
+            editToDo: function (toDo) {
+                toDo.editMode = true;
+            },
+            saveTodo: function (toDo) {
+                toDo.editMode = false;
             },
             deleteToDo: function (index) {
                 const tmpToDos = [];
