@@ -68,6 +68,7 @@ body {
 
             li {
                 display: flex;
+                align-items: center;
                 justify-content: space-between;
                 padding: 0.5em;
                 border-bottom: 0.01em solid gray;
@@ -107,7 +108,7 @@ body {
 
                     .changeStatus {
                         border: none;
-                        font-size: 1.2em;
+                        font-size: 1em;
                         background-color: transparent;
 
                         .fa-check-square {
@@ -121,7 +122,7 @@ body {
 
                     .priority {
                         border: none;
-                        font-size: 1.2em;
+                        font-size: 1em;
                         background-color: transparent;
                         color: orange;
                     }
