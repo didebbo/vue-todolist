@@ -20,7 +20,7 @@
                 <img src="images/logo.png" alt="Boolean">
             </div>
             <div class="input-section">
-                <input v-model="toDo" type="text" placeholder="Scrivi qui...">
+                <input v-model="toDo" @keyup.enter="addToDo" type="text" placeholder="Scrivi qui...">
                 <button @click="addToDo">Aggiungi</button>
             </div>
         </header>

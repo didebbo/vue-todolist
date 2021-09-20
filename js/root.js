@@ -7,7 +7,10 @@ const root = new Vue(
         },
         methods: {
             addToDo: function () {
-                if (this.toDo != "") this.toDos.push(this.toDo);
+                if (this.toDo != "") {
+                    this.toDos.push(this.toDo);
+                    this.toDo = "";
+                }
             },
             deleteToDo: function (index) {
                 const tmpToDos = [];
