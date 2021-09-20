@@ -46,11 +46,7 @@ const root = new Vue(
                 toDo.editMode = false;
             },
             deleteToDo: function (index) {
-                const tmpToDos = [];
-                this.toDos.forEach((toDo, i) => {
-                    if (i != index) tmpToDos.push(toDo);
-                });
-                this.toDos = tmpToDos;
+                this.toDos.splice(index, 1);
             },
             changeStatus: function (toDo) {
                 toDo.done = !toDo.done;
