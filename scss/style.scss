@@ -76,6 +76,17 @@ body {
                 &:hover {
                     background-color: white;
                 }
+
+                .desc {
+                    cursor: default;
+                }
+
+                .controls {
+
+                    .delete {
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }

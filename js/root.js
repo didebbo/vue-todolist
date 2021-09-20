@@ -2,9 +2,16 @@ const root = new Vue(
     {
         el: "#root",
         data: {
-            debug: "ToBoo List"
+            toDos: ["Andare a Scuola", "Fare i compiti", "Andare in palestra"]
         },
-        mounted: {},
-        methods: {}
+        methods: {
+            deleteToDo: function (index) {
+                const tmpToDos = [];
+                this.toDos.forEach((toDo, i) => {
+                    if (i != index) tmpToDos.push(toDo);
+                });
+                this.toDos = tmpToDos;
+            }
+        }
     }
 );

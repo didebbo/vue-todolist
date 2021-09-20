@@ -26,32 +26,12 @@
         </header>
         <main>
             <ul>
-                <li>
+                <li :key="index" v-for="(toDo, index) in toDos">
                     <div class="desc">
-                        To do this
+                        {{toDo}}
                     </div>
                     <div class="controls">
-                        <div class="delete">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="desc">
-                        To do this
-                    </div>
-                    <div class="controls">
-                        <div class="delete">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="desc">
-                        To do this
-                    </div>
-                    <div class="controls">
-                        <div class="delete">
+                        <div class="delete" @click="deleteToDo(index)">
                             <i class="fas fa-times"></i>
                         </div>
                     </div>
