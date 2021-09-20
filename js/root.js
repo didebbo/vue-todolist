@@ -5,7 +5,7 @@ const root = new Vue(
             toDo: "",
             toDos: [
                 {
-                    desc: "Andare a Scuola",
+                    desc: "Andare a scuola",
                     done: true,
                     editMode: false,
                     priority: false
@@ -17,7 +17,7 @@ const root = new Vue(
                     priority: true
                 },
                 {
-                    desc: "Andare in Palestra",
+                    desc: "Andare in palestra",
                     done: false,
                     editMode: false,
                     priority: false
