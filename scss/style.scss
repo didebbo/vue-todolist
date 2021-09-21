@@ -31,7 +31,7 @@ body {
             // border: 0.2em solid blue;
 
             img {
-                height: 10vh;
+                height: 10vmin;
             }
         }
 
@@ -43,7 +43,7 @@ body {
             }
             
             input {
-                width: (100% / 2);
+                width: 100%;
                 padding: 0.2em;
                 text-align: center;
             }
@@ -71,16 +71,16 @@ body {
                 border-bottom: 0.01em solid gray;
                 transition: background-color 0.2s;
 
-                &:hover {
-                    background-color: white;
-                }
-
                 &.done {
                     background-color: lightgreen;
                 }
 
                 &.priority {
                     background-color: lightyellow;
+                }
+
+                &:hover {
+                    background-color: white;
                 }
 
                 .desc {
@@ -92,13 +92,13 @@ body {
                         margin: 0.4em;
                     }
 
-                    > *:not(p) {
+                    > * {
                         cursor: pointer;
                     }
 
                     p, input {
-                        margin-right: auto;
                         padding: 0.2em;
+                        cursor: default;
                     }
 
                     .btnSaveTodo{
@@ -108,6 +108,7 @@ body {
                     .changeStatus {
                         border: none;
                         background-color: transparent;
+                        margin-left: auto;
 
                         .fa-calendar-check {
                             color: green;
@@ -141,3 +142,9 @@ body {
         }
     }
 }
+
+@media screen and (orientation: portrait) {
+    #root main ul li .desc input {
+      width: 100%;
+    }
+  }
